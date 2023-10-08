@@ -24,6 +24,12 @@ def index():
     
 
 #ADD "/get-story" API here!!
+@app.route("/get-story")
+def get_story():
+  return jsonify({
+    "status": "success",
+    "story": random.choice(stories)
+  })
 
 
     
